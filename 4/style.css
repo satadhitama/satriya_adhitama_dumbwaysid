@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Staatliches&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  color: rgb(26, 26, 26);
+}
+h1,h2,h3,h4 {
+  font-family: 'Staatliches', cursive;
+}
+p,a,button,select,label {
+  font-family: 'Montserrat', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.sidebar {
+  position: fixed;
+  width: 25vh;
+  height: 100vh;
+  background-color: rgba(61, 52, 40, 0.8);
+  z-index: 10;
+  box-sizing: border-box;
+  transform: translate(-25vh);
+  transition: 400ms ease-in;
+}
+.sidebar nav{
+  display: flex;
+  flex-direction: column;
+}
+.sidebar nav a {
+  font-size: 20px;
+  color: rgb(212, 212, 212);
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 200ms ease-in;
+}
+.sidebar nav a:hover {
+  background-color:  rgba(114, 111, 108, 0.8);
+  font-size: 30px;
+}
+.fa.fa-bars {
+  transition: 500ms ease-in;
+  position: fixed;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(212, 212, 212);
+  cursor: pointer;
+  z-index: 10;
+}
+.fa.fa-bars:hover {
+  background-color:  rgba(114, 111, 108, 0.8);
+  border-radius: 0 10px 10px 0;
+  transition: 400ms ease-in;
+}
+.sidebar-bars-active {
+  transform: translate(25vh);
+}
+.sidebar-active {
+  transform: translate(0);
+}
+.header {
+  width: 100%;
+  height: 600px;
+  background-image: url(assets/homepage-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-name {
+  position: relative;
+  font-size: 70px;
+  color: rgb(212, 212, 212);
+  background-color: rgba(0,0,0,.7);
+  padding: 30px;
+  transition: 200ms ease;
+}
+.game-name:hover {
+  cursor: default;
+  background-color: rgba(0,0,0,0.85);
+  font-size: 80px;
+}
+.header-bar {
+  position: relative;
+  height: 70px;
+  background-color: rgb(75, 63, 48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 10px;
+}
+.header-bar h1{
+  font-size: 20px;
+  text-align: center;
+  color: rgb(212, 212, 212);
+}
+.main {
+  background-color: rgb(206, 201, 195);
+  width: 100%;
+}
+.main-container {
+  min-height: 600px;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+  height: 100%;
+  background-color: rgb(192, 169, 141);
+  box-shadow: 0px 0px 10px;
+}
+#home-title {
+  padding-top: 30px;
+  text-align: center;
+}
+.contents{
+  padding: 20px;
+}
+.contents h1 {
+  font-size: 40px;
+  text-align: center;
+  margin: 30px;
+}
+.footer {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(75, 63, 48);
+}
+.footer p {
+  color: rgb(212, 212, 212);
+  font-size: 10px;
+}
+.footer p span {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+.footer-content {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fa.fa-instagram {
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+.heroes-top {
+  display: flex;
+  justify-content: space-evenly;
+}
+.add-hero {
+  margin-right: 50px;
+}
+.choose-type {
+  margin-left: 50px;
+  font-weight: 700;
+}
+#select-type {
+  margin-top: 10px;
+  outline: none;
+  background-color: rgb(235, 224, 209);
+  width: 130px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.fa.fa-search {
+  margin-left: 5px;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 10px;
+  transition: 300ms ease-in;
+}
+.fa.fa-search:hover {
+  background-color: rgb(235, 224, 209);
+  border-radius: 15px;
+}
+.heroes-container {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card {
+  height: 320px;
+  width: 280px;
+  margin: 15px;
+  border: 1px solid rgb(75, 63, 48);
+  box-sizing: border-box;
+  box-shadow: 0 0 3px;
+  transition: 200ms ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.card:hover {
+  position: relative;
+  transform: scale(1.1,1.1);
+  box-shadow: 0 0 20px;
+}
+.hero-image {
+  width: 170px;
+  height: 170px;
+  margin: 5px;
+  background-color: rgba(75, 63, 48,0.4);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-name {
+  font-size: 28px;
+}
+.hero-type {
+  font-size: 18px;
+}
+.hero-detail {
+  margin: 20px;
+  height: 30px;
+  width: 100px;
+  background-color: rgb(189, 177, 112);
+  transition: 200ms ease-in;
+}
+.hero-detail:hover {
+  background-color: rgb(235, 225, 172);
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero .hero-image {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 30px;
+}
+.hero .hero-name {
+  font-size: 38px;
+  margin: 10px;
+}
+.hero .hero-type {
+  margin-bottom: 10px;
+}
+.hero-description {
+  width: 400px;
+  height: 150px;
+  background-color: rgb(235, 224, 209);
+  overflow: auto;
+  box-sizing: border-box;
+}
+.hero-description p {
+  padding: 10px;
+  font-size: 15px;
+}
+.hero-action {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 70%;
+}
+.type-table {
+  text-align: center;
+  min-width: 300px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.table-head {
+  display: flex;
+}
+.table-data {
+  display: flex;
+}
+.cell-number {
+  border: 1px solid rgb(75, 63, 48);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cell-type {
+  border: 1px solid rgb(75, 63, 48);
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cell-action {
+  border: 1px solid rgb(75, 63, 48);
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cell-action .btn {
+  margin: 5px;
+  height: 15px;
+  width: 50px;
+}
+.form-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgb(75, 63, 48);
+}
+.btn.edit {
+  position: relative;
+  background-color: rgb(235, 174, 63);
+}
+.btn.edit:hover {
+  background-color: rgb(246, 166, 17);
+  transform: scale(1.1,1.1);
+}
+.btn.delete {
+  position: relative;
+  background-color: rgb(224, 77, 77);
+}
+.btn.delete:hover {
+  background-color: red;
+  transform: scale(1.1,1.1);
+}
+.btn.add {
+  position: relative;
+  background-color: rgb(148, 202, 67);
+}
+.btn.add:hover {
+  background-color: greenyellow;
+  transform: scale(1.1,1.1);
+}
